@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>{{ title }}</h2>
+{% if logs %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Person Name</th>
+                <th>Visit Date & Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log_entry in logs %}
+            <tr>
+                <td>{{ log_entry.id }}</td>
+                <td>{{ log_entry.person_name }}</td>
+                <td>{{ log_entry.visit_date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No visit logs found.</p>
+{% endif %}
+{% endblock %}

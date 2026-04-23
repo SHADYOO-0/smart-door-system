@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="text-center mb-4">
+    <h1>Welcome, {{ current_user.name }}!</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6 text-center">
+        <h3>Door Control</h3>
+        <button id="openDoorBtn" class="btn btn-success btn-lg mb-3">Open Door</button>
+    </div>
+    <div class="col-md-6 text-center">
+        <h3>Camera</h3>
+        <button id="takePhotoBtn" class="btn btn-info btn-lg mb-3">Take New Photo</button>
+        <div class="mt-3">
+            <img id="doorCameraImage" src="{{ image_url }}" alt="Door Camera" class="img-fluid" style="max-height: 480px; border: 1px solid #ccc;">
+             <p><small>Image timestamp: <span id="imageTimestamp">Loading...</span></small></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

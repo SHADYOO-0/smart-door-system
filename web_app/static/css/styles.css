@@ -1,0 +1,13 @@
+body {
+    padding-top: 20px;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+#doorCameraImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
